@@ -1,0 +1,358 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Cartão de Assistência Virtual</title>
+<meta property="og:title" content="Cartão de Assistência Virtual - Marcílio Seguros" />
+<meta property="og:description" content="Acesse a assistência 24h e serviços YELUM Seguros da Marcílio Seguros." />
+<meta property="og:image" content="https://marcilioseguros.github.io/ASSISTENCIA-YELUM-MC/preview-yelum.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://marcilioseguros.github.io/ASSISTENCIA-YELUM-MC/" />
+<meta property="og:type" content="website" />
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Cartão de Assistência Virtual - Marcílio Seguros" />
+<meta name="twitter:description" content="Acesse a assistência 24h e serviços YELUM Seguros da Marcílio Seguros." />
+<meta name="twitter:image" content="https://marcilioseguros.github.io/ASSISTENCIA-YELUM-MC/preview-yelum.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  
+  /* Layout: coluna única de cartão (máx. 460px). Escala de espaçamento 4/8/12/16/24. Fundo azul-marinho profundo, marca em azul-claro e um fio dourado tirado da logo. */
+  :root{
+    --bg:#0d0000;  /*DEGRADE DO FUNDO DA TELA*/
+    --bg-glow:#10246f;  /*SOBRA NA PARTE SUPERIOR DO SITE*/
+    --royal:#2d44e0;
+    --sky:#8dbcff; /*LETRAS DOS SUBTITULOS*/
+    --gold:#e4a227;  /*LETRA DA MARCILIO SEGURO PRIMERIA PÁGINA*/
+    --fg:#ffffff;  /*LETRA DOS BOTÕES*/
+    --muted:#b4c0e4;  /*LETRA DA MARCILIO CANTO INFERIOS E AS SETAS*/
+    --line:rgba(158, 181, 6, 0.2);  /*BORDAS DOS BOTÕES*/
+    --line-strong:rgba(251, 250, 251, 0.956);  /*BORDAS DA CAIXA DOS EMOJI*/
+    --surface-top:rgba(38,62,170,.46);  /*DEGRADER DOS BOTÕES SUPERIOR*/
+    --surface-bottom:rgba(14,26,92,.62); /*DEGRADER DOS BOTÕES INFERIOR*/
+    --font:'Montserrat',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+    --r-lg:22px;
+    --r-md:16px;
+    --s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;
+    color-scheme:dark;
+  }
+  *{box-sizing:border-box}
+  html,body{min-height:100%}
+  body{
+    margin:0;
+    font-family:var(--font);
+    background:
+      radial-gradient(110% 55% at 50% -8%,rgba(45,68,224,.30) 0%,transparent 62%),
+      radial-gradient(70% 50% at 100% 100%,rgba(45,68,224,.30) 0%,transparent 70%),
+      var(--bg);
+    background-attachment:fixed;
+    color:var(--fg);
+    padding-left:max(16px,env(safe-area-inset-left,0px));
+    padding-right:max(16px,env(safe-area-inset-right,0px));
+  }
+  .card{
+    width:100%;max-width:460px;margin:0 auto;
+    min-height:100vh;min-height:100dvh;
+    display:flex;flex-direction:column;gap:var(--s5);
+    padding-block:var(--s5) 32px;
+  }
+
+  /* Cabeçalho com as marcas */
+  .brand{
+    position:relative;
+    display:flex;align-items:center;gap:var(--s4);
+    padding:2px var(--s5);border-radius:var(--r-lg);
+    background:linear-gradient(135deg,rgba(45,68,224,.34),rgba(10,20,70,.62));
+    border:1px solid var(--line);
+    box-shadow:0 12px 32px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.08);
+  }
+  .brand::after{
+    content:"";position:absolute;left:var(--s5);right:var(--s5);bottom:-1px;height:2px;border-radius:2px;
+    background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.85;
+  }
+  .brand .mark{flex:1;display:flex;align-items:center;justify-content:center;min-width:0}
+  .brand .divider{width:1px;height:44px;background:var(--line-strong)}
+  .brand img{display:block;max-width:100%;height:auto;object-fit:contain}
+  .brand .logo-m{width:min(100%,180px)}
+  .brand .logo-a{width:min(100%,150px)}
+
+  .head{display:flex;flex-direction:column;gap:var(--s2);align-items:center;text-align:center;padding-inline:var(--s2)}
+  .head .kicker{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--gold)}
+  .head h1{
+    margin:0;font-size:clamp(19px,5.4vw,23px);line-height:1.3;font-weight:800;
+    text-transform:uppercase;letter-spacing:.02em;text-wrap:balance;
+  }
+  .head p{margin:0;font-size:12px;font-weight:600;color:var(--sky);letter-spacing:.16em;text-transform:uppercase}
+
+  .screen{display:flex;flex-direction:column;gap:var(--s3);animation:in .25s ease both}
+  @keyframes in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){.screen{animation:none}.btn{transition:none}}
+
+  .group{display:flex;flex-direction:column;gap:var(--s3)}
+  .group + .group{margin-top:var(--s3)}
+  .group-title{
+    margin:0;display:flex;align-items:center;gap:var(--s3);
+    font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--sky);
+  }
+  .group-title::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  /* Botões */
+  .btn{
+    appearance:none;width:100%;text-align:left;cursor:pointer;
+    display:flex;align-items:center;gap:var(--s4);
+    min-height:76px;padding:var(--s3) var(--s4) var(--s3) var(--s3);
+    border-radius:var(--r-lg);border:1px solid var(--line);
+    background:linear-gradient(180deg,var(--surface-top),var(--surface-bottom));
+    color:var(--fg);text-decoration:none;font-family:var(--font);
+    box-shadow:0 8px 22px rgba(4, 4, 4, 0.28),inset 0 1px 0 rgba(255,255,255,.08);
+    transition:transform .18s ease,border-color .18s ease,background .18s ease;
+  }
+  .btn:hover{transform:translateY(-2px);border-color:var(--line-strong);background:linear-gradient(180deg,rgba(52,80,205,.55),rgba(18,32,110,.7))}
+  .btn:active{transform:scale(.985)}
+  .btn:focus-visible,.back:focus-visible{outline:3px solid var(--sky);outline-offset:3px}
+  .btn .badge{
+    flex:none;width:52px;height:52px;border-radius:var(--r-md);
+    display:grid;place-items:center;
+    background:linear-gradient(145deg,rgba(26, 27, 26, 0.951),rgba(45,68,224,.34));
+    border:1px solid var(--line-strong);
+  }
+  .btn svg{width:26px;height:26px;fill:none;stroke:#fff;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+  .btn .badge img{width:32px;height:32px;display:block}
+  .btn .txt{flex:1;min-width:0;display:flex;flex-direction:column;gap:var(--s1)}
+  .btn .label{font-size:clamp(13px,3.7vw,15px);font-weight:700;letter-spacing:.04em;text-transform:uppercase;line-height:1.3}
+  .btn .sub{font-size:12px;font-weight:600;color:var(--sky);letter-spacing:.03em;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+  .btn .chev{flex:none;width:18px;height:18px;stroke:var(--muted);stroke-width:2;opacity:.8}
+
+  .back{
+    align-self:center;margin-top:var(--s2);
+    display:inline-flex;align-items:center;gap:var(--s2);
+    padding:13px 30px 13px 18px;border-radius:999px;cursor:pointer;
+    border:1px solid var(--line-strong);background:rgba(141,188,255,.10);
+    color:var(--fg);font:700 13px var(--font);letter-spacing:.16em;text-transform:uppercase;
+    transition:background .18s ease;
+  }
+  .back:hover{background:rgba(135, 122, 122, 0.466)}
+  .back svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+  .foot{margin-top:auto;padding-top:var(--s2);text-align:center;font-size:11px;font-weight:600;letter-spacing:.16em;color:var(--muted);text-transform:uppercase;opacity:.8}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-headset" viewBox="0 0 24 24"><path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z"/><path d="M21 16v2a4 4 0 0 1-4 4h-5"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-team" viewBox="0 0 24 24"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2z"/><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"/></symbol>
+    <symbol id="i-insta" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></symbol>
+    <symbol id="i-whats" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M9 10c.4 1.8 1.7 3.6 4 4.6l1.3-1.1a.8.8 0 0 1 .9-.1l1.6.8a.8.8 0 0 1 .4.9c-.3 1-1.2 1.6-2.2 1.5C10.600 16.200 7.800 13.200 7.500 10c-.1-1 .5-1.900 1.500-2.200a.8.8 0 0 1 .9.4l.8 1.600a.8.8 0 0 1-.1.900z"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></symbol>
+    <symbol id="i-buoy" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/></symbol>
+    <symbol id="i-chev" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+    <symbol id="i-back" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+  </defs>
+</svg>
+
+<div class="card">
+
+  <!-- Cabeçalho com as marcas (igual em todas as telas) -->
+  <header class="brand">
+    <div class="mark"><img src="logodamarcilio.png" alt="Marcílio Seguros" class="logo-m"></div>
+    <div class="divider"></div>
+    <div class="mark right"><img src="logoyelum.png" alt="Logo Seguradora" class="logo-a"></div>
+  </header>
+
+  <div class="head">
+    <div class="kicker" id="kicker">Marcílio Seguros</div>
+    <h1 id="title"></h1>
+    <p id="subtitle" hidden></p>
+  </div>
+
+  <main>
+
+    <!-- TELA 1: Menu principal -->
+    <section class="screen" id="home" data-title="Cartão de Assistência Virtual" hidden>
+      <button class="btn" data-go="corretora">
+        <span class="badge"><svg><use href="#i-headset"/></svg></span>
+        <span class="txt"><span class="label">Assistência 24h</span><span class="sub">Horário comercial · Corretora</span></span>
+        <svg class="chev"><use href="#i-chev"/></svg>
+      </button>
+      <button class="btn" data-go="seguradora">
+        <span class="badge"><svg><use href="#i-shield"/></svg></span>
+        <span class="txt"><span class="label">Assistência 24h</span><span class="sub">Seguradora</span></span>
+        <svg class="chev"><use href="#i-chev"/></svg>
+      </button>
+      <a class="btn" data-link="maps" target="_blank" rel="noopener">
+        <span class="badge"><svg><use href="#i-pin"/></svg></span>
+        <span class="txt"><span class="label">Endereço da corretora</span><span class="sub">Abrir no Google Maps</span></span>
+        <svg class="chev"><use href="#i-chev"/></svg>
+      </a>
+      <button class="btn" data-go="equipe">
+        <span class="badge"><img src="data:image/png;base64,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" alt=""></span>
+        <span class="txt"><span class="label">Fale com nossa equipe</span></span>
+        <svg class="chev"><use href="#i-chev"/></svg>
+      </button>
+      <a class="btn" data-link="instagram" target="_blank" rel="noopener">
+        <span class="badge"><svg><use href="#i-insta"/></svg></span>
+        <span class="txt"><span class="label">Instagram</span><span class="sub" data-show="instagram"></span></span>
+        <svg class="chev"><use href="#i-chev"/></svg>
+      </a>
+    </section>
+
+    <!-- TELA 2: Assistência corretora -->
+    <section class="screen" id="corretora" data-title="Assistência Corretora" hidden>
+      <div class="group">
+        <h2 class="group-title">Horário comercial</h2>
+        <button class="btn" data-go="com-whats">
+          <span class="badge"><svg><use href="#i-whats"/></svg></span>
+          <span class="txt"><span class="label">WhatsApp</span><span class="sub">Escolha o atendente</span></span>
+          <svg class="chev"><use href="#i-chev"/></svg>
+        </button>
+        <button class="btn" data-go="com-tel">
+          <span class="badge"><svg><use href="#i-phone"/></svg></span>
+          <span class="txt"><span class="label">Telefone</span><span class="sub">Escolha o atendente</span></span>
+          <svg class="chev"><use href="#i-chev"/></svg>
+        </button>
+      </div>
+      <div class="group">
+        <h2 class="group-title">Horário 24h</h2>
+        <a class="btn" data-link="plantao-whats" target="_blank" rel="noopener">
+          <span class="badge"><svg><use href="#i-whats"/></svg></span>
+          <span class="txt"><span class="label">Plantonista 24h Sandro</span></span>
+          <svg class="chev"><use href="#i-chev"/></svg>
+        </a>
+        <a class="btn" data-link="plantao-tel">
+          <span class="badge"><svg><use href="#i-phone"/></svg></span>
+          <span class="txt"><span class="label">Telefone</span><span class="sub" data-show="plantao-tel"></span></span>
+          <svg class="chev"><use href="#i-chev"/></svg>
+        </a>
+      </div>
+      <button class="back" data-go="home"><svg><use href="#i-back"/></svg>Volta</button>
+    </section>
+
+    <!-- TELA 3: Horário comercial, WhatsApp -->
+    <section class="screen" id="com-whats" data-title="Assistência em horário comercial" data-sub="WhatsApp" hidden>
+      <a class="btn" data-link="warison-whats" target="_blank" rel="noopener"><span class="badge"><svg><use href="#i-user"/></svg></span><span class="txt"><span class="label">Atendente 1</span><span class="sub">Warison</span></span><svg class="chev"><use href="#i-chev"/></svg></a>
+      <a class="btn" data-link="thayane-whats" target="_blank" rel="noopener"><span class="badge"><svg><use href="#i-user"/></svg></span><span class="txt"><span class="label">Atendente 2</span><span class="sub">Thayane</span></span><svg class="chev"><use href="#i-chev"/></svg></a>
+      <button class="back" data-go="corretora"><svg><use href="#i-back"/></svg>Volta</button>
+    </section>
+
+    <!-- TELA 4: Horário comercial, telefone -->
+    <section class="screen" id="com-tel" data-title="Assistência em horário comercial" data-sub="Telefone" hidden>
+      <a class="btn" data-link="warison-tel"><span class="badge"><svg><use href="#i-user"/></svg></span><span class="txt"><span class="label">Atendente 1 · Warison</span><span class="sub" data-show="warison-tel"></span></span><svg class="chev"><use href="#i-chev"/></svg></a>
+      <a class="btn" data-link="thayane-tel"><span class="badge"><svg><use href="#i-user"/></svg></span><span class="txt"><span class="label">Atendente 2 · Thayane</span><span class="sub" data-show="thayane-tel"></span></span><svg class="chev"><use href="#i-chev"/></svg></a>
+      <button class="back" data-go="corretora"><svg><use href="#i-back"/></svg>Volta</button>
+    </section>
+
+    <!-- TELA 5: Assistência 24h seguradora -->
+    <section class="screen" id="seguradora" data-title="Assistência 24h Seguradora" hidden>
+      <a class="btn" data-link="site-seguradora" target="_blank" rel="noopener">
+        <span class="badge"><svg><use href="#i-globe"/></svg></span>
+        <span class="txt"><span class="label">Site da seguradora</span><span class="sub">yelumseguros.com.br</span></span>
+        <svg class="chev"><use href="#i-chev"/></svg>
+      </a>
+      <a class="btn" data-link="seguradora-whats" target="_blank" rel="noopener">
+        <span class="badge"><svg><use href="#i-whats"/></svg></span>
+        <span class="txt"><span class="label">Atendimento via WhatsApp</span></span>
+        <svg class="chev"><use href="#i-chev"/></svg>
+      </a>
+      <a class="btn" data-link="seguradora-tel-metropolis">
+        <span class="badge"><svg><use href="#i-phone"/></svg></span>
+        <span class="txt"><span class="label">Telefone para Metrópolis</span><span class="sub" data-show="seguradora-tel-metropolis"></span></span>
+        <svg class="chev"><use href="#i-chev"/></svg>
+      </a>
+      <a class="btn" data-link="seguradora-tel-demais">
+        <span class="badge"><svg><use href="#i-phone"/></svg></span>
+        <span class="txt"><span class="label">Telefone para demais locais</span><span class="sub" data-show="seguradora-tel-demais"></span></span>
+        <svg class="chev"><use href="#i-chev"/></svg>
+      </a>
+      <button class="back" data-go="home"><svg><use href="#i-back"/></svg>Volta</button>
+    </section>
+
+    <!-- TELA 6: Fale com nossa equipe -->
+    <section class="screen" id="equipe" data-title="Fale com nossa equipe" data-sub="Atendimento em horário comercial" hidden>
+      <a class="btn" data-link="equipe-whats" target="_blank" rel="noopener">
+        <span class="badge"><svg><use href="#i-whats"/></svg></span>
+        <span class="txt"><span class="label">Atendimento via WhatsApp</span></span>
+        <svg class="chev"><use href="#i-chev"/></svg>
+      </a>
+      <a class="btn" data-link="equipe-tel">
+        <span class="badge"><svg><use href="#i-phone"/></svg></span>
+        <span class="txt"><span class="label">Atendimento via telefone</span><span class="sub" data-show="equipe-tel"></span></span>
+        <svg class="chev"><use href="#i-chev"/></svg>
+      </a>
+      <button class="back" data-go="home"><svg><use href="#i-back"/></svg>Volta</button>
+    </section>
+
+  </main>
+
+  <div class="foot">Marcílio Seguros · YELUM</div>
+</div>
+
+<script>
+/* ============================================================
+   CONFIGURAÇÃO: edite só esta parte.
+   Números: apenas dígitos, com DDI e DDD (ex.: 5585999990000).
+   Os números abaixo são exemplos e precisam ser trocados.
+   ============================================================ */
+function whats(n, msg){ return "https://wa.me/" + n + (msg ? "?text=" + encodeURIComponent(msg) : ""); }
+function tel(n){ return "tel:+" + n.replace(/^\+/, ""); }
+function tel0800(n){ return "tel:" + n.replace(/\D/g, ""); }
+var CONFIG = {
+  links: {
+    "maps":        "https://www.google.com/maps/search/?api=1&query=Marcilio+Seguros",
+    "instagram":   "https://www.instagram.com/marcilioseguros/",
+    "site-seguradora": "https://www.yelumseguros.com.br/Pages/home.aspx",
+    "plantao-whats": whats("5583993822105", "Olá, sou cliente da corretora Marcílio seguro e preciso de assistência 24h."),
+    "plantao-tel":   tel("5583993822105"),
+    "warison-whats": whats("5583991646011"),
+    "thayane-whats":  whats("5583991646040"),
+    "warison-tel":   tel("5583991646011"),
+    "thayane-tel":    tel("5583991646040"),
+    "seguradora-whats":   whats("551132061414"),
+    "seguradora-tel-metropolis": tel("5511 40045423"),
+    "seguradora-tel-demais": tel0800("08007095423"),
+    "equipe-whats": whats("558335132123"),
+    "equipe-tel":   tel("5583 35132123")
+  }
+};
+
+/* ============================================================ */
+document.querySelectorAll("[data-link]").forEach(function(a){
+  a.href = CONFIG.links[a.dataset.link] || "#";
+});
+document.querySelectorAll("[data-show]").forEach(function(el){
+  var l = CONFIG.links[el.dataset.show] || "";
+  if (l.indexOf("tel:") === 0) {
+    var d = l.slice(5);
+    if (d.indexOf("55") === 0 && d.length >= 12) d = d.slice(2);
+    el.textContent = d.length === 11 ? "(" + d.slice(0,2) + ") " + d.slice(2,7) + "-" + d.slice(7) : d;
+  } else if (l.indexOf("instagram.com/") > -1) {
+    var u = l.split("instagram.com/")[1].replace(/\/$/, "");
+    el.textContent = u === "marcilioseguros" ? "@marcilioseguros" : "@" + u;
+  }
+});
+
+var titleEl = document.getElementById("title");
+var subEl = document.getElementById("subtitle");
+var kickerEl = document.getElementById("kicker");
+function show(id){
+  var target = document.getElementById(id) || document.getElementById("home");
+  document.querySelectorAll(".screen").forEach(function(s){ s.hidden = true; });
+  target.hidden = false;
+  titleEl.textContent = target.dataset.title;
+  subEl.hidden = !target.dataset.sub;
+  subEl.textContent = target.dataset.sub || "";
+  kickerEl.hidden = target.id !== "home";
+  window.scrollTo(0, 0);
+}
+document.querySelectorAll("[data-go]").forEach(function(b){
+  b.addEventListener("click", function(){ show(b.dataset.go); });
+});
+var start = (location.hash || "").replace("#", "");
+show(start || "home");
+</script>
+
+</body></html>
